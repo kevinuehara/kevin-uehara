@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SideBar } from "../SideBar";
 
 const links = [
   { label: "Home", href: "/" },
@@ -9,9 +10,15 @@ const links = [
 
 export default function Header() {
   return (
-    <div className="flex bg-gray-900 text-white h-20 rounded-sm items-center w-screen">
+    <div
+      className={`
+      flex items-center 
+      bg-gray-900 text-white 
+      h-20 rounded-sm  w-screen`}
+    >
+      <SideBar items={links} className={`sm:hidden`} />
       <h1 className="ml-5 text-2xl">Kevin Uehara</h1>
-      <nav className="ml-20">
+      <nav className="ml-20 hidden sm:block">
         <ul className="flex">
           {links.map(({ label, href }) => (
             <li key={label}>
