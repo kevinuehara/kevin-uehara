@@ -12,12 +12,12 @@ export default function Header() {
   return (
     <div
       className={`
-      flex items-center 
+      flex items-center  sm:justify-start
       bg-gray-900 text-white 
       h-20 rounded-sm  w-screen`}
     >
       <SideBar items={links} className={`sm:hidden`} />
-      <h1 className="ml-5 text-2xl">Kevin Uehara</h1>
+      <h1 className="ml-5 text-2xl sm:mr-0">Kevin Uehara</h1>
       <nav className="ml-20 hidden sm:block">
         <ul className="flex">
           {links.map(({ label, href }) => (

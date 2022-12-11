@@ -20,7 +20,7 @@ export const SideBar = ({ items, className }: SideBarProps) => {
       </div>
 
       <aside
-        className={`top-18  w-[35vw] h-full bg-gray-900 z-40 fixed ease-in-out duration-300 ${
+        className={`top-18  w-[50vw] h-full bg-gray-900 z-40 fixed ease-in-out duration-300 ${
           isActive ? "left-0" : "-left-80"
         } 
           `}
