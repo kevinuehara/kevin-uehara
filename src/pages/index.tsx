@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
 import profilePic from "../images/profile.png";
 import { useTheme } from "../hooks/Theme";
+import { Footer } from "../components/Footer";
 
 export default function MainPage() {
   const { theme } = useTheme();
@@ -13,7 +14,7 @@ export default function MainPage() {
       <MainContainer>
         <div
           className={`
-            flex items-center md:items-start flex-col md:flex-row md:justify-center
+            flex  md:items-start flex-col md:flex-row md:justify-center
             mt-10
           `}
         >
@@ -50,6 +51,7 @@ export default function MainPage() {
           </div>
         </div>
       </MainContainer>
+      <Footer />
     </div>
   );
 }
