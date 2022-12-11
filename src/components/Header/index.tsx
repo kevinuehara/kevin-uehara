@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { useTheme } from "../../hooks/Theme";
 import { SideBar } from "../SideBar";
+import { SwitchThemeButton } from "../SwitchThemeButton";
 
 const links = [
   { label: "Home", href: "/" },
@@ -9,16 +11,18 @@ const links = [
 ];
 
 export default function Header() {
+  const { theme, switchTheme } = useTheme();
   return (
     <div
       className={`
-      flex items-center  sm:justify-start
+      flex items-center justify-between
       bg-gray-900 text-white 
+      dark:bg-white dark:text-gray-900 dark:border-gray-600 border-b
       h-20 rounded-sm  w-screen`}
     >
       <SideBar items={links} className={`sm:hidden`} />
       <h1 className="ml-5 text-2xl sm:mr-0">Kevin Uehara</h1>
-      <nav className="ml-20 hidden sm:block">
+      <nav className="hidden sm:block">
         <ul className="flex">
           {links.map(({ label, href }) => (
             <li key={label}>
@@ -29,6 +33,9 @@ export default function Header() {
           ))}
         </ul>
       </nav>
+      <div className="mr-8">
+        <SwitchThemeButton theme={theme} switchTheme={switchTheme} />
+      </div>
     </div>
   );
 }

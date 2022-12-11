@@ -3,14 +3,17 @@ import { MainContainer } from "../components/MainContainer";
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
 import profilePic from "../images/profile.png";
+import { useTheme } from "../hooks/Theme";
 
 export default function MainPage() {
+  const { theme } = useTheme();
   return (
-    <div>
+    <div className={`${theme}`}>
       <Header />
       <MainContainer>
         <div
           className={`
+          
             flex items-center md:items-start flex-col md:flex-row md:justify-center
             mt-10
           `}
@@ -18,7 +21,7 @@ export default function MainPage() {
           <Image
             className={`
               rounded-full
-              h-3/5
+              h-45
             `}
             src={profilePic}
             alt="Profile Image"

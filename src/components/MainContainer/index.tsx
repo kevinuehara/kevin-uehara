@@ -9,7 +9,7 @@ export const MainContainer: React.FC<PropsWithChildren<MainContainerProps>> = ({
   title = "",
 }) => {
   return (
-    <div className="flex flex-col m-5">
+    <div className="flex flex-col w-screen h-screen dark:bg-gray-900 dark:text-white">
       <h1 className="text-3xl font-bold">{title}</h1>
       {children}
     </div>

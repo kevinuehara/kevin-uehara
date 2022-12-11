@@ -20,7 +20,7 @@ export const SideBar = ({ items, className }: SideBarProps) => {
       </div>
 
       <aside
-        className={`top-18  w-[50vw] h-full bg-gray-900 z-40 fixed ease-in-out duration-300 ${
+        className={`top-18  w-[50vw] h-full bg-gray-900 dark:bg-white z-40 fixed ease-in-out duration-300 ${
           isActive ? "left-0" : "-left-80"
         } 
           `}
@@ -30,7 +30,7 @@ export const SideBar = ({ items, className }: SideBarProps) => {
             {items.map(({ label, href = "" }) => (
               <li
                 key={label}
-                className="p-3 pl-10 w-full hover:bg-gray-500 cursor-pointer"
+                className="p-3 pl-10 w-full hover:bg-gray-500 cursor-pointer dark:hover:bg-gray-900 dark:hover:text-white"
               >
                 <Link href={href}>{label}</Link>
               </li>
