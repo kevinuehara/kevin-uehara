@@ -19,7 +19,7 @@ export const Header = () => {
         <Menu />
       </div>
 
-      <div className=" hidden md:hidden">
+      <div className="hidden md:block">
         <div className="flex">
           <a
             className="m-2"
