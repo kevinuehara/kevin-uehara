@@ -7,13 +7,15 @@ import { BiSolidGroup } from "react-icons/bi";
 import { Header } from "@/components/Header";
 import { Card } from "@/components/Card";
 import { IoChatbubble } from "react-icons/io5";
+import YouTube from "react-youtube";
+import { YoutubeVideos } from "@/components/YoutubeVideos";
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen bg-gray-950 relative">
+    <div className="w-fit h-fit bg-gray-950">
       <Header />
       <main className="h-full w-full">
-        <section className="flex flex-col md:flex-row text-white items-center gap-16 md:pt-40 pt-20">
+        <section className="flex flex-col md:flex-row text-white items-center gap-16 md:pt-40 pt-20 md:-mt-20 -mt-10">
           <div className="flex flex-col items-center md:items-start gap-3 w-full p-4 md:w-1/2 md:ml-32 mt-5">
             <h1 className="md:text-5xl text-4xl font-extrabold">
               Hello, my name is
@@ -84,6 +86,107 @@ export default function Home() {
             </section>
           </Card>
         </section>
+
+        <section className="flex flex-col items-center bg-gray-950  text-white h-full mt-12">
+          <h2 className="text-5xl font-extrabold">Work</h2>
+          <div className="flex flex-col w-full justify-center items-center">
+            <Card className="w-10/12 mt-20 flex flex-col md:flex-row rounded-xl p-8 gap-5">
+              <div className="flex md:flex-row flex-col justify-center items-center">
+                <Image
+                  src="/ifood.png"
+                  alt="IFood Image Logo"
+                  className="dark:invert rounded-3xl mt-5 mr-5"
+                  width={200}
+                  height={200}
+                  priority
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+
+                <div className="flex flex-col">
+                  <h3 className="text-3xl font-extrabold mb-5 ">
+                    Staff Frontend Engineer
+                  </h3>
+
+                  <span className="text-gray-300 ">
+                    Participate in the development of geographic solutions on
+                    the frontend, develop and manage platforms for the Location
+                    team. It creates and develops platforms that generate value
+                    and add to the experience of operating users. aParticipates
+                    in the development of geographic solutions on the frontend,
+                    develops and manages the platforms of the Location team. It
+                    creates and develops applications that generate value and
+                    add to the experience of operating users.
+                  </span>
+                  <span className="text-gray-300 ">
+                    Has experience with platforms in frontend solutions using
+                    monorepo, micro-frontend, maps and more. It operates
+                    cross-functionally in multidisciplinary teams focused on
+                    iFood's geolocation, responsible for the logistics of the
+                    entire localization process, delivery areas, mapping regions
+                    and geographic analyses, thus impacting the product's
+                    journey.
+                  </span>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="w-10/12 mt-5 flex flex-col md:flex-row rounded-xl p-8 gap-5">
+              <div className="flex md:flex-row flex-col justify-center items-center">
+                <Image
+                  src="/nodebr.png"
+                  alt="NodeBR Image Logo"
+                  className="dark:invert rounded-3xl mt-5 mr-5 mb-10"
+                  width={200}
+                  height={200}
+                  priority
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+
+                <div className="flex flex-col">
+                  <h3 className="text-3xl font-extrabold mb-5 ">
+                    Community Partner and Collaborator
+                  </h3>
+
+                  <span className="text-gray-300 ">
+                    Partner and content creator in the NodeBR community.
+                    Responsible for participating, coordinating and assisting in
+                    the Brazilian community. I organized an in-person meetup in
+                    partnership with ifood called Frontend Universe with 120
+                    people and 3 speakers in 2024.
+                  </span>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="w-10/12 mt-5 flex flex-col md:flex-row rounded-xl p-8 gap-5">
+              <div className="flex md:flex-row flex-col justify-center items-center">
+                <Image
+                  src="/gdg.svg"
+                  alt="Google Developer Groups Image Logo"
+                  className="dark:invert rounded-3xl mt-5 mr-5 mb-10"
+                  width={200}
+                  height={200}
+                  priority
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+
+                <div className="flex flex-col">
+                  <h3 className="text-3xl font-extrabold mb-5">
+                    Collaborator at Google Developer Groups Campinas
+                  </h3>
+
+                  <span className="text-gray-300">
+                    Collaborator at GDG Campinas (Google Developer Groups).
+                    Responsible for organizing, creating and bringing events to
+                    the Campinas community, representing the Google community.
+                  </span>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        <YoutubeVideos />
       </main>
     </div>
   );

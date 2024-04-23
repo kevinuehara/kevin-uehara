@@ -12,10 +12,11 @@ import {
 
 export const Menu = () => {
   return (
-    <div className="flex justify-between w-full">
+    <div className="flex justify-between w-full mt-7">
       <div className="border p-2 rounded-3xl bg-black flex justify-around shadow-md shadow-gray-500 invisible md:visible">
         <ItemMenu label="Home" active />
         <ItemMenu label="Work" />
+        <ItemMenu label="Videos" />
         <ItemMenu label="Events" />
       </div>
 
@@ -23,7 +24,7 @@ export const Menu = () => {
         <DropdownMenuTrigger asChild>
           <Button
             variant="outline"
-            className="rounded-full w-14 h-14 md:invisible visible mt-5"
+            className="rounded-full w-14 h-14 md:invisible visible mt-7 mr-2 bg-slate-600"
           >
             <GiHamburgerMenu className="w-14 h-14" />
           </Button>
@@ -32,6 +33,9 @@ export const Menu = () => {
           <DropdownMenuGroup>
             <DropdownMenuItem className="cursor-pointer">Home</DropdownMenuItem>
             <DropdownMenuItem className="cursor-pointer">Work</DropdownMenuItem>
+            <DropdownMenuItem className="cursor-pointer">
+              Videos
+            </DropdownMenuItem>
             <DropdownMenuItem className="cursor-pointer">
               Events
             </DropdownMenuItem>
