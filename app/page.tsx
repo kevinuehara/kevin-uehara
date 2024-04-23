@@ -121,9 +121,9 @@ export default function Home() {
                     Has experience with platforms in frontend solutions using
                     monorepo, micro-frontend, maps and more. It operates
                     cross-functionally in multidisciplinary teams focused on
-                    iFood's geolocation, responsible for the logistics of the
+                    iFoods geolocation, responsible for the logistics of the
                     entire localization process, delivery areas, mapping regions
-                    and geographic analyses, thus impacting the product's
+                    and geographic analyses, thus impacting the products
                     journey.
                   </span>
                 </div>
