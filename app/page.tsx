@@ -7,8 +7,8 @@ import { BiSolidGroup } from "react-icons/bi";
 import { Header } from "@/components/Header";
 import { Card } from "@/components/Card";
 import { IoChatbubble } from "react-icons/io5";
-import YouTube from "react-youtube";
 import { YoutubeVideos } from "@/components/YoutubeVideos";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -51,7 +51,10 @@ export default function Home() {
             sizes="(max-width: 768px) 100vw, 33vw"
           />
         </section>
-        <section className="flex justify-center items-center bg-gray-950 mt-0">
+        <section
+          id="home"
+          className="flex justify-center items-center bg-gray-950 mt-0"
+        >
           <Card className="w-10/12 mt-20 flex flex-col md:flex-row rounded-xl p-8 gap-5">
             <section className="flex flex-col text-white md:w-1/3 w-full">
               <FaCode className="text-purple-600 text-5xl" />
@@ -87,7 +90,10 @@ export default function Home() {
           </Card>
         </section>
 
-        <section className="flex flex-col items-center bg-gray-950  text-white h-full mt-12">
+        <section
+          id="work"
+          className="flex flex-col items-center bg-gray-950  text-white h-full mt-12"
+        >
           <h2 className="text-5xl font-extrabold">Work</h2>
           <div className="flex flex-col w-full justify-center items-center">
             <Card className="w-10/12 mt-20 flex flex-col md:flex-row rounded-xl p-8 gap-5">
@@ -187,7 +193,48 @@ export default function Home() {
         </section>
 
         <YoutubeVideos />
+
+        <section
+          id="events"
+          className="flex flex-col items-center bg-gray-950 text-white h-full mt-12"
+        >
+          <h2 className="text-5xl font-extrabold">Events 2024</h2>
+          <h3 className="mt-5 text-3xl font-extrabold text-gray-300">Brazil</h3>
+          <div className="flex md:flex-row flex-col mt-5 justify-center items-center w-full">
+            <Image
+              src="/frontcamp.png"
+              alt="FrontIn Campinas Logo"
+              className="dark:invert rounded-3xl mt-5 mr-5"
+              width={400}
+              height={400}
+              priority
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <Image
+              src="/tdc-floripa.png"
+              alt="TDC Floripa Brazil Logo"
+              className="dark:invert rounded-3xl mt-5 mr-5"
+              width={350}
+              height={350}
+              priority
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <Image
+              src="/hacktown.png"
+              alt="HackTown Event Logo"
+              className="dark:invert rounded-3xl mt-5 mr-5"
+              width={350}
+              height={100}
+              priority
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          </div>
+          <h2 className="mt-10 text-3xl font-extrabold text-gray-300">
+            May change throughout the year
+          </h2>
+        </section>
       </main>
+      <Footer />
     </div>
   );
 }

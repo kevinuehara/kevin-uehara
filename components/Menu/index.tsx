@@ -13,11 +13,11 @@ import {
 export const Menu = () => {
   return (
     <div className="flex justify-between w-full mt-7">
-      <div className="border p-2 rounded-3xl bg-black flex justify-around shadow-md shadow-gray-500 invisible md:visible">
-        <ItemMenu label="Home" active />
-        <ItemMenu label="Work" />
-        <ItemMenu label="Videos" />
-        <ItemMenu label="Events" />
+      <div className="border p-3 rounded-3xl bg-black flex justify-around shadow-md shadow-gray-500 invisible md:visible">
+        <ItemMenu label="Home" href="#home" active />
+        <ItemMenu label="Work" href="#work" />
+        <ItemMenu label="Videos" href="#videos" />
+        <ItemMenu label="Events" href="#events" />
       </div>
 
       <DropdownMenu>
@@ -31,13 +31,17 @@ export const Menu = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56 bg-white">
           <DropdownMenuGroup>
-            <DropdownMenuItem className="cursor-pointer">Home</DropdownMenuItem>
-            <DropdownMenuItem className="cursor-pointer">Work</DropdownMenuItem>
             <DropdownMenuItem className="cursor-pointer">
-              Videos
+              <a href="#home">Home</a>
             </DropdownMenuItem>
             <DropdownMenuItem className="cursor-pointer">
-              Events
+              <a href="#work">Work</a>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="cursor-pointer">
+              <a href="#videos">Videos</a>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="cursor-pointer">
+              <a href="#events">Events</a>
             </DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />

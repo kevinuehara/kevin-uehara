@@ -9,7 +9,10 @@ const opts = {
 
 export const YoutubeVideos = () => {
   return (
-    <section className="flex flex-col items-center bg-gray-950  text-white h-full mt-12 w-full">
+    <section
+      id="videos"
+      className="flex flex-col items-center bg-gray-950  text-white h-full mt-12 w-full"
+    >
       <h2 className="text-5xl font-extrabold">Videos</h2>
       <div className="flex flex-col justify-center items-center w-full mt-10">
         <div className="flex md:flex-row flex-col justify-center items-center">

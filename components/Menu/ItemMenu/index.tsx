@@ -6,12 +6,11 @@ interface ItemMenuProps {
 
 export const ItemMenu = ({ label, href, active }: ItemMenuProps) => {
   return (
-    <div
-      className={`border p-3 w-28 items-center transition delay-100 justify-center flex  rounded-3xl cursor-pointer border-purple-600 hover:bg-purple-600 ${
-        active ? "bg-purple-700 " : "bg-black"
-      }`}
+    <a
+      href={href}
+      className={`border p-1 m-2 w-24 items-center transition delay-100 justify-center flex  rounded-3xl cursor-pointer border-purple-600 hover:bg-purple-600`}
     >
       {label}
-    </div>
+    </a>
   );
 };
