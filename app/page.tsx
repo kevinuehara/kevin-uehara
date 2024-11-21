@@ -17,17 +17,19 @@ export default function Home() {
       <main className="h-full w-full">
         <section className="flex flex-col md:flex-row text-white items-center gap-16 md:pt-40 pt-20 md:-mt-20 -mt-10">
           <div className="flex flex-col items-center md:items-start gap-3 w-full p-4 md:w-1/2 md:ml-32 mt-5">
-            <h1 className="md:text-5xl text-4xl font-extrabold">
-              Hello, my name is
-            </h1>
-            <h1 className="md:text-5xl text-4xl font-extrabold">
-              Kevin Uehara
-            </h1>
-            <span className="md:text-2xl text-xl mt-4 md:text-start text-center">
-              Brazilian Staff Frontend Engineer at IFood, NodeBR Collaborator,
-              GDG Campinas, FrontIn Campinas Organizer, Speaker and Content Tech
-              Creator.
-            </span>
+            <div className="flex justify-center flex-col items-center">
+              <h1 className="md:text-5xl text-4xl font-extrabold mb-2">
+                Hi, my name is
+              </h1>
+              <h1 className="md:text-5xl text-4xl font-extrabold text-purple-600">
+                Kevin Uehara
+              </h1>
+              <span className="md:text-2xl text-xl mt-4 md:text-start text-center">
+                Brazilian Staff Frontend Engineer at IFood, Microsoft MVP,
+                NodeBR and GDG Campinas Collaborator, FrontIn Campinas
+                Organizer, Speaker and Content Tech Creator.
+              </span>
+            </div>
             <div className="flex gap-2">
               <Pill label="Developer" className="bg-purple-950 text-xl">
                 <FaCode />
@@ -41,15 +43,18 @@ export default function Home() {
             </div>
           </div>
 
-          <Image
-            src="/kevin.jpg"
-            alt="Kevin Uehara Photo"
-            className="dark:invert rounded-3xl mt-5 md:ml-5"
-            width={400}
-            height={500}
-            priority
-            sizes="(max-width: 768px) 100vw, 33vw"
-          />
+          <div className="relative bg-purple-600 w-80 h-80 left-10 rounded-full">
+            <div className="w-[100px]"> </div>
+            <Image
+              src="/kevin4.png"
+              alt="Kevin Uehara Photo"
+              className="dark:invert rounded-3xl mt-5 md:ml-5 z-50 absolute w-72 left-6 -top-16"
+              width={400}
+              height={500}
+              priority
+              sizes="(max-width: 768px) 10vw, 10vw"
+            />
+          </div>
         </section>
         <section
           id="home"
@@ -194,7 +199,7 @@ export default function Home() {
 
         <YoutubeVideos />
 
-        <section
+        {/* <section
           id="events"
           className="flex flex-col items-center bg-gray-950 text-white h-full mt-12"
         >
@@ -232,7 +237,7 @@ export default function Home() {
           <h2 className="mt-10 text-3xl font-extrabold text-gray-300">
             May change throughout the year
           </h2>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

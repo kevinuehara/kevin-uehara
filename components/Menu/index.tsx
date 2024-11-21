@@ -11,7 +11,7 @@ export const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex justify-between w-full mt-7">
-      <div className="border p-3 rounded-3xl bg-black flex justify-around shadow-md shadow-gray-500 invisible md:visible">
+      <div className="p-3 rounded-3xl bg-black flex justify-around  invisible md:visible">
         <ItemMenu label="Home" href="#home" />
         <ItemMenu label="Work" href="#work" />
         <ItemMenu label="Videos" href="#videos" />
